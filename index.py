@@ -7,6 +7,10 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/', methods = ['GET'])
+def sendfile():
+    return 'HVI RUSNAK, TOVARNAK, SAVKO'
+
 @app.route('/sendFile', methods = ['GET'])
 def sendfile():
     return send_file('C:/Users/Richard/Desktop/RBF/prezentacia.pptx')
